@@ -179,3 +179,46 @@ button:disabled{opacity:.45;cursor:not-allowed}
   .header-search{height:48px!important;border-radius:14px!important}
   .header-search input{font-size:14px!important}
 }
+
+
+/* DESIGN HER — clean white storefront with black typography */
+:root{--cream:#ffffff;--paper:#ffffff;--ink:#171717;--muted:#666666;--gold:#b38b45;--line:#e8e8e8;--rose:#b77e78;--sage:#dce2d6}
+html,body{background:#fff!important;color:#171717!important}
+body,main,.wrap,.section,.shop,.feature,.hero{color:#171717!important}
+.announcement,.topbar,.top{background:#fff!important;color:#171717!important;border-color:#e8e8e8!important}
+.header,.nav{background:#fff!important;color:#171717!important;border-color:#e8e8e8!important}
+.brand{color:#171717!important}.brand small,.sub{color:#9b783d!important}
+.links a,.navlinks a,.nav a,.action{color:#171717!important}
+.hero,.shop,.feature,.category,.product,.card,.panel,.stat,.row,.summary,.promise article,.drawer,.modal,.modalback .modal{background:#fff!important;color:#171717!important;border-color:#e8e8e8!important}
+.hero{background:#fff!important}
+.hero p,.section-head p,.product-info p,.muted,.footer p,.drawer-note{color:#666!important}
+.eyebrow,.product-info small,.price{color:#a47d3b!important}
+h1,h2,h3,.heading,.title,.name,.drawer-head h3,.panel-head h2,.modalhead h2{color:#171717!important}
+.cta,.add,.btn,.checkout,.filter.active,.filter:hover,.filters button.active{background:#171717!important;color:#fff!important;border-color:#171717!important}
+.outline,.filter,.filters button,.heart,.field,.search,.navbtn,.mini,.qty button,.remove{background:#fff!important;color:#171717!important;border-color:#dedede!important}
+.category{background:#fff!important;border-color:#e7e7e7!important}
+.category:hover{border-color:#b38b45!important}
+.product,.card{border:1px solid #e8e8e8!important;box-shadow:0 8px 24px #0000000a!important}
+.product-art,.photo,.gallery,.mini-art,.thumb{background:#f7f7f7!important}
+.product-art:before{background:#b38b4510!important;border-color:#b38b4530!important}
+.art-note{background:#fff!important;color:#171717!important;border:1px solid #e8e8e8!important}
+.hero-art{background:#fafafa!important;border:1px solid #e7e7e7!important;box-shadow:0 12px 35px #0000000a!important}
+.hero-photo-frame{background:#f7f7f7!important;border-color:#dedede!important}
+#heroPhotoEmpty{color:#171717!important}#heroPhotoEmpty span{color:#9b783d!important}
+.footer{background:#fff!important;color:#171717!important;border-top:1px solid #e8e8e8!important}
+.copyright{border-color:#e8e8e8!important}.drawer-backdrop{background:#0008!important}
+.count{background:#b38b45!important;color:#fff!important}
+.heart.saved{color:#b77e78!important;border-color:#b77e78!important}
+.pill{background:#f5f0e7!important;color:#8c692e!important}
+.warning{background:#fff9ed!important;border-color:#e5d5b5!important;color:#5c4828!important}
+.notice{background:#b38b45!important;color:#fff!important}
+input,textarea,select{background:#fff!important;color:#171717!important;border-color:#dedede!important}
+input::placeholder,textarea::placeholder{color:#888!important}
+.header-search{background:#fff!important;border-color:#d8d8d8!important;color:#171717!important}
+.header-search input{background:transparent!important;color:#171717!important}
+.header-search input::placeholder{color:#888!important}
+.side{background:#fff!important;color:#171717!important;border-right:1px solid #e8e8e8!important}
+.side .brand,.navitem{color:#171717!important}
+.navitem.active{background:#f5f0e7!important;color:#171717!important}
+.stat,.panel{background:#fff!important;border-color:#e8e8e8!important}
+@media(max-width:800px){.header .nav>.brand,.header .nav>.actions .icon-action{color:#171717!important}}
