@@ -422,3 +422,20 @@ html body main .hero .art-note{
 html body main .hero .art-note{
  background:#000!important;border:1px solid #555!important;
 }
+
+
+/* DESIGN HER clean typography: use the same simple logo-style sans font everywhere */
+html, body, body *, button, input, textarea, select {
+  font-family: 'Montserrat', Arial, sans-serif !important;
+}
+h1, h2, h3, h4, h5, h6,
+.brand, .brand small, .hero h1, .section-head h2,
+.product-info h3, .category strong, .feature h2,
+.drawer h3, .modal h2 {
+  font-family: 'Montserrat', Arial, sans-serif !important;
+  font-weight: 500 !important;
+  font-style: normal !important;
+}
+.hero h1, h1 { letter-spacing: -0.7px !important; }
+.brand { font-weight: 600 !important; letter-spacing: 5px !important; }
+.brand small { font-weight: 400 !important; letter-spacing: 3px !important; }
