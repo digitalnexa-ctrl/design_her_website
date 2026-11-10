@@ -102,3 +102,57 @@ button:disabled{opacity:.45;cursor:not-allowed}
     flex:0 0 19px;
   }
 }
+
+
+/* Strong mobile layout override — logo row, actions row */
+@media screen and (max-width: 800px) {
+  .header .nav {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding-top: 14px !important;
+    padding-bottom: 14px !important;
+    row-gap: 10px !important;
+  }
+  .header .nav > .brand {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+  }
+  .header .nav > .actions {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    border-top: 1px solid #57472b !important;
+    padding-top: 10px !important;
+    margin: 0 !important;
+  }
+  .header .nav > .actions > a.action:first-child {
+    display: inline-flex !important;
+    min-width: 100px !important;
+    min-height: 42px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 0 18px !important;
+    border-radius: 3px !important;
+    background: #c5a365 !important;
+    color: #11100f !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+  }
+  .header .nav > .actions > .action {
+    min-height: 42px !important;
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    white-space: nowrap !important;
+  }
+}
