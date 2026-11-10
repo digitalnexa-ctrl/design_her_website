@@ -45,3 +45,60 @@ button:disabled{opacity:.45;cursor:not-allowed}
 #heroPhotoEmpty{text-align:center;color:#e0c17e;font:25px 'Playfair Display',serif;line-height:1.5;padding:20px}
 #heroPhotoEmpty span{font:9px 'DM Sans',sans-serif;letter-spacing:2px;color:#b99b60}
 .hero-art .art-note{right:12px;bottom:12px}
+
+
+/* Mobile header: move Shop below the logo and make it easy to spot */
+@media(max-width:650px){
+  .header .nav{
+    height:auto!important;
+    min-height:0;
+    flex-wrap:wrap;
+    align-items:center;
+    row-gap:12px;
+    padding-top:14px;
+    padding-bottom:14px;
+  }
+  .header .brand{
+    display:block;
+    width:100%;
+    font-size:24px!important;
+    line-height:1.1;
+  }
+  .header .brand small{
+    text-align:left;
+    margin-top:4px;
+    letter-spacing:3px;
+  }
+  .header .actions{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:8px!important;
+    padding-top:10px;
+    border-top:1px solid #39332a;
+  }
+  .header .actions .action{
+    min-height:42px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:5px;
+    font-size:13px;
+    white-space:nowrap;
+  }
+  .header .actions a.action:first-child{
+    background:#c5a365!important;
+    color:#11100f!important;
+    padding:0 22px;
+    min-width:92px;
+    font-weight:700;
+    letter-spacing:1px;
+    border-radius:3px;
+  }
+  .header .actions .count{
+    width:19px;
+    height:19px;
+    flex:0 0 19px;
+  }
+}
