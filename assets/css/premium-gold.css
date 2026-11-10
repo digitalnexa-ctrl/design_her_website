@@ -337,3 +337,35 @@ input,textarea,select{background:#080808!important;color:#fff!important;border-c
  .header-search-wrap{background:#000!important}
  .header-search{height:48px!important}
 }
+
+
+/* Visibility fix: force header identity and controls to white */
+.header .brand,
+.header .brand:link,
+.header .brand:visited,
+.header .brand small,
+.header .actions .action,
+.header .actions .icon-action,
+.header .actions .action *,
+.header .actions .icon-action *,
+.header .actions button,
+.header .actions button span{
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+  opacity:1!important;
+  visibility:visible!important;
+  text-shadow:none!important;
+}
+.header .actions .count,
+.header .actions .count *{
+  background:#fff!important;
+  color:#000!important;
+  -webkit-text-fill-color:#000!important;
+}
+.header .actions button{
+  min-width:42px!important;
+  min-height:42px!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+}
