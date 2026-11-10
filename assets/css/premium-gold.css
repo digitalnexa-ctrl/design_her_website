@@ -1,0 +1,47 @@
+/* DESIGN HER — Premium Black & Gold storefront theme */
+:root{--cream:#11100f;--paper:#191715;--ink:#f5f0e7;--muted:#b9afa0;--gold:#c8a96a;--line:#39332a;--rose:#c88d86;--sage:#dce2d6}
+html{scroll-behavior:smooth}
+body{background:#11100f!important;color:#f5f0e7!important}
+a{color:inherit}
+.announcement,.topbar,.top{background:#080807!important;color:#e8d7b4!important;border-color:#403522!important}
+.header,.nav{background:#11100f!important;color:#f5f0e7!important;border-color:#39332a!important}
+.brand{color:#e0c17e!important;letter-spacing:4px!important}
+.brand small,.sub{color:#b99b60!important}
+.links a,.navlinks a,.nav a,.action{color:#e9e1d3!important}
+.hero,.shop,.feature,.category,.product,.card,.panel,.stat,.row,.summary,.promise article,.drawer,.modal,.modalback .modal{background:#191715!important;color:#f5f0e7!important;border-color:#39332a!important}
+.hero{background:radial-gradient(ellipse at 75% 45%,#3b2d18 0,#191715 48%,#11100f 100%)!important}
+.hero p,.section-head p,.product-info p,.muted,.footer p,.drawer-note{color:#b9afa0!important}
+.eyebrow,.product-info small,.price{color:#d1b16e!important}
+h1,h2,h3,.heading,.title,.name,.drawer-head h3,.panel-head h2,.modalhead h2{color:#f5f0e7!important}
+.cta,.add,.btn,.checkout,.filter.active,.filter:hover,.filters button.active{background:#c5a365!important;color:#11100f!important;border-color:#c5a365!important}
+.outline,.filter,.filters button,.heart,.field,.search,.navbtn,.mini,.qty button,.remove{background:#11100f!important;color:#e8dfd2!important;border-color:#57472b!important}
+.category{background:linear-gradient(145deg,#211d17,#151311)!important;border-color:#493b25!important}
+.category:hover{border-color:#c5a365!important}
+.product,.card{border:1px solid #403522!important;box-shadow:0 12px 35px #0005}
+.product-art,.photo,.gallery,.mini-art,.thumb{background:#262117!important}
+.product-art:before{background:#c5a36522!important;border-color:#c5a36555!important}
+.product-art img,.photo img,.gallery img{object-fit:cover}
+.gift-box{background:linear-gradient(145deg,#d6bd85,#80602e)!important;box-shadow:24px 25px 0 #322718!important}
+.gift-box:before,.gift-box:after{background:#f0dfb9!important}
+.ribbon{color:#20170c!important}
+.art-note{background:#171410!important;color:#e2c78f!important;border:1px solid #5a4726!important}
+.footer{background:#080807!important;color:#f5f0e7!important;border-top:1px solid #57472b!important}
+.copyright{border-color:#403522!important}
+.drawer-backdrop{background:#000b!important}
+.count{background:#c5a365!important;color:#11100f!important}
+.heart.saved{color:#e2b0a7!important;border-color:#a96f65!important}
+.pill{background:#3b3323!important;color:#e1c27d!important}
+.warning{background:#302719!important;border-color:#6d542c!important;color:#e5d0a4!important}
+.notice{background:#c5a365!important;color:#11100f!important}
+input,textarea,select{background:#11100f!important;color:#f5f0e7!important;border-color:#57472b!important}
+input::placeholder,textarea::placeholder{color:#8f8577!important}
+button:disabled{opacity:.45;cursor:not-allowed}
+@media(max-width:650px){.hero{background:radial-gradient(ellipse at 50% 55%,#3b2d18 0,#191715 60%,#11100f 100%)!important}}
+
+/* Featured collection photography */
+.hero-art{min-height:390px!important;background:linear-gradient(145deg,#211b12,#090908)!important;border:1px solid #66502b!important;padding:26px!important;box-shadow:0 24px 65px #0008}
+.hero-photo-frame{width:100%;height:340px;max-width:390px;margin:auto;position:relative;display:grid;place-items:center;overflow:hidden;background:linear-gradient(145deg,#302619,#14110c);border:1px solid #8b6b35}
+.hero-photo-frame img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+#heroPhotoEmpty{text-align:center;color:#e0c17e;font:25px 'Playfair Display',serif;line-height:1.5;padding:20px}
+#heroPhotoEmpty span{font:9px 'DM Sans',sans-serif;letter-spacing:2px;color:#b99b60}
+.hero-art .art-note{right:12px;bottom:12px}
