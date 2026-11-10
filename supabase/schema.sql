@@ -112,3 +112,14 @@ create policy "Admins can delete product images"
 -- After creating the first admin account, promote its auth UUID manually:
 -- insert into public.profiles (id, role) values ('AUTH_USER_UUID', 'admin')
 -- on conflict (id) do update set role = 'admin';
+
+
+-- Browser storefront read access: grants are required in addition to RLS policies.
+grant usage on schema public to anon, authenticated;
+grant select on table public.products to anon, authenticated;
+alter table public.products enable row level security;
+drop policy if exists "Public can read active products" on public.products;
+create policy "Public can read active products"
+  on public.products for select
+  to anon, authenticated
+  using (is_active = true);
