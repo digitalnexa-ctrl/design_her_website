@@ -37,3 +37,11 @@ input,textarea,select{background:#11100f!important;color:#f5f0e7!important;borde
 input::placeholder,textarea::placeholder{color:#8f8577!important}
 button:disabled{opacity:.45;cursor:not-allowed}
 @media(max-width:650px){.hero{background:radial-gradient(ellipse at 50% 55%,#3b2d18 0,#191715 60%,#11100f 100%)!important}}
+
+/* Featured collection photography */
+.hero-art{min-height:390px!important;background:linear-gradient(145deg,#211b12,#090908)!important;border:1px solid #66502b!important;padding:26px!important;box-shadow:0 24px 65px #0008}
+.hero-photo-frame{width:100%;height:340px;max-width:390px;margin:auto;position:relative;display:grid;place-items:center;overflow:hidden;background:linear-gradient(145deg,#302619,#14110c);border:1px solid #8b6b35}
+.hero-photo-frame img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+#heroPhotoEmpty{text-align:center;color:#e0c17e;font:25px 'Playfair Display',serif;line-height:1.5;padding:20px}
+#heroPhotoEmpty span{font:9px 'DM Sans',sans-serif;letter-spacing:2px;color:#b99b60}
+.hero-art .art-note{right:12px;bottom:12px}
