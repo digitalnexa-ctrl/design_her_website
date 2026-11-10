@@ -24,8 +24,21 @@
 </main>
 <footer class="footer" id="contact"><div class="wrap"><div class="footer-grid"><div><div class="brand">DESIGN HER</div><p>Thoughtful gifts. Beautiful moments.<br>Made to make someone smile.</p></div><div><b>Explore</b><p><a href="#categories">Gift categories</a><br><a href="#story">Our story</a><br><a href="#promise">Why DESIGN HER</a></p></div><div><b>Connect</b><p>Instagram: @designher.official<br>Order enquiries and store details will be added before launch.</p></div></div><div class="copyright">© 2026 DESIGN HER · THE GIFT EDIT</div></div></footer>
 <div class="drawer-backdrop" id="drawerBackdrop"><aside class="drawer" aria-label="Your gift bag"><div class="drawer-head"><h3 id="drawerTitle">Your gift bag</h3><button class="close" id="closeDrawer" aria-label="Close">×</button></div><div class="cart-items" id="drawerItems"></div><div class="drawer-note">This is a design preview. Product pricing, stock, delivery and secure payment will be connected before the store goes live.</div><a class="checkout" href="#shop" id="drawerAction">Continue exploring</a></aside></div><div class="notice" id="notice" role="status"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
 <script>
-const catalog=JSON.parse(localStorage.getItem('designHerProducts')||'[]').filter(p=>p.status==='Active').map(p=>({...p,tone:'#eee4d6',symbol:'✦'}));
+let catalog=JSON.parse(localStorage.getItem('designHerProducts')||'[]').filter(p=>p.status==='Active').map(p=>({...p,tone:'#eee4d6',symbol:'✦'}));
+async function loadStoreProducts(){
+  const cfg=window.DESIGN_HER_SUPABASE||{};
+  if(!cfg.url||!cfg.anonKey||!window.supabase?.createClient)return;
+  try{
+    const client=window.supabase.createClient(cfg.url,cfg.anonKey);
+    const {data,error}=await client.from('products').select('id,name,category,description,price,stock,image_url').eq('is_active',true).order('created_at',{ascending:false});
+    if(error)throw error;
+    catalog=(data||[]).map(p=>({id:p.id,name:p.name,cat:p.category,desc:p.description,price:p.price,stock:p.stock,image:p.image_url,tone:'#eee4d6',symbol:'✦'}));
+    renderProducts();updateCounts();
+  }catch(err){console.error('DESIGN HER product sync:',err);notify('Store catalogue is temporarily unavailable.')}
+}
 let activeFilter='All',query='',cart=[],wishlist=[];
 const $=id=>document.getElementById(id);
 function notify(msg){$('notice').textContent=msg;$('notice').classList.add('show');setTimeout(()=>$('notice').classList.remove('show'),1900)}
@@ -40,6 +53,6 @@ $('searchInput').addEventListener('input',e=>{query=e.target.value;renderProduct
 $('focusSearch').onclick=()=>{$('shop').scrollIntoView({behavior:'smooth'});setTimeout(()=>$('searchInput').focus(),350)};
 $('cartBtn').onclick=()=>openDrawer('cart');$('wishlistBtn').onclick=()=>openDrawer('wishlist');$('closeDrawer').onclick=closeDrawer;$('drawerBackdrop').addEventListener('click',e=>{if(e.target===$('drawerBackdrop'))closeDrawer()});
 document.querySelectorAll('[data-category-link]').forEach(a=>a.addEventListener('click',()=>{activeFilter=a.dataset.categoryLink;document.querySelectorAll('.filter').forEach(x=>x.classList.toggle('active',x.dataset.filter===activeFilter));renderProducts()}));
-renderProducts();updateCounts();
+renderProducts();updateCounts();loadStoreProducts();
 </script>
 </body></html>
