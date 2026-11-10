@@ -4,7 +4,7 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#000000"><title>DESIGN HER — Store Information</title>
 <style>
-*{box-sizing:border-box}body{margin:0;background:#000;color:#fff;font-family:Montserrat,Arial,sans-serif;line-height:1.7}a{color:inherit;text-decoration:none}.top{padding:22px 24px;border-bottom:1px solid #333;display:flex;justify-content:space-between;align-items:center;gap:16px}.brand{font-size:23px;font-weight:700;letter-spacing:5px}.back{font-size:13px}.wrap{width:min(850px,calc(100% - 40px));margin:55px auto 90px}.eyebrow{font-size:11px;letter-spacing:3px;color:#aaa}.wrap h1{font-size:36px;line-height:1.2;margin:12px 0 35px}.policy{padding:25px 0;border-top:1px solid #333;scroll-margin-top:20px}.policy h2{font-size:19px;margin:0 0 10px}.policy p{font-size:14px;color:#bbb;margin:0}.foot{border-top:1px solid #333;padding:24px;color:#999;font-size:11px;letter-spacing:1px}
+*{box-sizing:border-box}body{margin:0;background:#000;color:#fff;font-family:Montserrat,Arial,sans-serif;line-height:1.7}a{color:inherit;text-decoration:none}.top{padding:22px 24px;border-bottom:1px solid #333;display:flex;justify-content:space-between;align-items:center;gap:16px}.brand{font-size:23px;font-weight:700;letter-spacing:5px}.back{font-size:13px}.wrap{width:min(850px,calc(100% - 40px));margin:55px auto 90px}.eyebrow{font-size:11px;letter-spacing:3px;color:#aaa}.wrap h1{font-size:36px;line-height:1.2;margin:12px 0 35px}.policy{display:none;padding:25px 0;border-top:1px solid #333;scroll-margin-top:20px}.policy.is-active{display:block}.policy h2{font-size:19px;margin:0 0 10px}.policy p{font-size:14px;color:#bbb;margin:0}.foot{border-top:1px solid #333;padding:24px;color:#999;font-size:11px;letter-spacing:1px}
 </style></head>
 <body>
 <header class="top"><a class="brand" href="./">DESIGN HER</a><a class="back" href="./">← Back to home</a></header>
@@ -16,5 +16,23 @@
 <section class="policy" id="shipping-policy"><h2>Shipping Policy</h2><p>Delivery areas, dispatch timelines, shipping fees and tracking information will be published here before orders open.</p></section>
 <section class="policy" id="terms"><h2>Terms &amp; Conditions</h2><p>The store terms will be published here before customers can place orders.</p></section>
 <section class="policy" id="privacy"><h2>Privacy Policy</h2><p>Our privacy notice explaining how customer information is collected, used and protected will be published here before customer accounts or checkout are enabled.</p></section>
-</main><footer class="foot">© 2026 DESIGN HER · THE GIFT EDIT</footer>
+</main>
+<script>
+(function(){
+ const sections=[...document.querySelectorAll('.policy')];
+ function showSelected(){
+   const requested=(location.hash||'#about').slice(1);
+   const selected=sections.find(section=>section.id===requested)||sections[0];
+   sections.forEach(section=>section.classList.toggle('is-active',section===selected));
+   const heading=document.querySelector('.wrap h1');
+   if(heading) heading.textContent=selected.querySelector('h2').textContent;
+   const eyebrow=document.querySelector('.wrap .eyebrow');
+   if(eyebrow) eyebrow.textContent='THE GIFT EDIT · STORE INFORMATION';
+   window.scrollTo(0,0);
+ }
+ window.addEventListener('hashchange',showSelected);
+ showSelected();
+})();
+</script>
+<footer class="foot">© 2026 DESIGN HER · THE GIFT EDIT</footer>
 </body></html>
