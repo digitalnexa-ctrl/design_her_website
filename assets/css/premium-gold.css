@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* DESIGN HER typography — force fonts across the storefront */
+html,body,button,input,textarea,select,.action,.cta,.outline,.filter,.eyebrow,.price,.product-info small{
+  font-family:'Montserrat',sans-serif!important;
+}
+h1,h2,h3,h4,h5,h6,.brand,.hero h1,.section-head h2,.product-info h3,.category strong,.feature h2,.drawer h3,.modal h2{
+  font-family:'Cormorant Garamond',serif!important;
+  font-weight:600!important;
+}
 /* DESIGN HER — Premium Black & Gold storefront theme */
 :root{--cream:#11100f;--paper:#191715;--ink:#f5f0e7;--muted:#b9afa0;--gold:#c8a96a;--line:#39332a;--rose:#c88d86;--sage:#dce2d6}
 html{scroll-behavior:smooth}
