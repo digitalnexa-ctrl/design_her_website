@@ -54,7 +54,7 @@
 <footer class="footer" id="contact"><div class="wrap"><div class="footer-grid">
 <div class="footer-brand"><a class="brand" href="./">DESIGN HER</a><p>Thoughtful gifts. Beautiful moments.<br>Made to make someone smile.</p></div>
 <div class="footer-column"><b>SHOP</b><p><a href="./">Home</a></p><p><a href="shop.html">Shop all gifts</a></p><p><a href="shop.html">Gift collection</a></p><p><a href="shop.html">Personalised gifts</a></p></div>
-<div class="footer-column"><b>CUSTOMER CARE</b><p><a href="cart.html">My bag</a></p><p><a href="./?openWishlist=1">Wishlist</a></p><p><a href="policies.html#shipping">Shipping card</a></p><p><a href="policies.html#payment">Payment</a></p><p><a href="policies.html#returns">Return &amp; Refund Policy</a></p></div>
+<div class="footer-column"><b>CUSTOMER CARE</b><p><a href="cart.html">My bag</a></p><p><a href="#wishlist" id="footerWishlistLink">Wishlist</a></p><p><a href="policies.html#shipping">Shipping card</a></p><p><a href="policies.html#payment">Payment</a></p><p><a href="policies.html#returns">Return &amp; Refund Policy</a></p></div>
 <div class="footer-column"><b>ABOUT &amp; STORE</b><p><a href="policies.html#about">Our story</a></p><p><a href="policies.html#customise">Customise</a></p><p><a href="https://www.instagram.com/designher.official/" target="_blank" rel="noopener">Instagram</a></p><p><a href="admin.html">Admin Login</a></p></div>
 <div class="footer-column"><b>POLICIES</b><p><a href="policies.html#shipping-policy">Shipping Policy</a></p><p><a href="policies.html#terms">Terms &amp; Conditions</a></p><p><a href="policies.html#privacy">Privacy Policy</a></p></div>
 </div><div class="copyright">© 2026 DESIGN HER · THE GIFT EDIT</div></div></footer>
@@ -86,7 +86,7 @@ function closeDrawer(){$('drawerBackdrop').classList.remove('open');document.bod
 $('filters').addEventListener('click',e=>{const b=e.target.closest('[data-filter]');if(!b)return;activeFilter=b.dataset.filter;document.querySelectorAll('.filter').forEach(x=>x.classList.toggle('active',x===b));renderProducts()});
 $('searchInput').addEventListener('input',e=>{query=e.target.value;renderProducts()});
 
-$('cartBtn').onclick=()=>openDrawer('cart');$('wishlistBtn').onclick=()=>openDrawer('wishlist');$('closeDrawer').onclick=closeDrawer;$('drawerBackdrop').addEventListener('click',e=>{if(e.target===$('drawerBackdrop'))closeDrawer()});
+$('cartBtn').onclick=()=>openDrawer('cart');$('wishlistBtn').onclick=()=>openDrawer('wishlist');const footerWishlistLink=$('footerWishlistLink');if(footerWishlistLink)footerWishlistLink.onclick=e=>{e.preventDefault();openDrawer('wishlist')};$('closeDrawer').onclick=closeDrawer;$('drawerBackdrop').addEventListener('click',e=>{if(e.target===$('drawerBackdrop'))closeDrawer()});
 document.querySelectorAll('[data-category-link]').forEach(a=>a.addEventListener('click',()=>{activeFilter=a.dataset.categoryLink;document.querySelectorAll('.filter').forEach(x=>x.classList.toggle('active',x.dataset.filter===activeFilter));renderProducts()}));
 renderProducts();updateCounts();loadStoreProducts();if(new URLSearchParams(location.search).get('openWishlist')==='1')openDrawer('wishlist');
 </script>
