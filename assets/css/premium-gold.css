@@ -272,3 +272,68 @@ button:hover,.btn:hover,.cta:hover,.add:hover,.checkout:hover,.outline:hover,.fi
 .announcement,.footer,.header,.nav{border-color:#333!important}
 hr,.divider,.copyright{border-color:#444!important}
 ::selection{background:#fff!important;color:#000!important}
+
+
+/* FINAL DESIGN HER monochrome presentation — override legacy theme */
+html,body{background:#000!important;color:#fff!important;font-family:'DM Sans',sans-serif!important}
+body *{font-family:'DM Sans',sans-serif!important}
+body,main,header,footer,section,article,aside,nav,
+.wrap,.header,.nav,.hero,.hero-grid,.hero-art,.hero-photo-frame,
+.section,.shop,.feature,.category,.product,.product-card,.product-art,
+.card,.panel,.stat,.summary,.drawer,.modal,.footer,.header-search-wrap,
+.header-search,.toolbar,.filters,.products,.footer-grid,.copyright{
+ background-color:#000!important;color:#fff!important;border-color:#333!important
+}
+h1,h2,h3,h4,h5,h6,p,span,label,b,strong,small,a,a:visited,
+.brand,.brand small,.eyebrow,.price,.section-head,.section-head p,
+.product-info,.product-info h3,.product-info p,.footer p,.footer b{
+ color:#fff!important;font-family:'DM Sans',sans-serif!important
+}
+.brand{font-size:25px!important;font-weight:600!important;letter-spacing:5px!important}
+.brand small{font-size:9px!important;font-weight:400!important;letter-spacing:3px!important}
+.header{background:#000!important;border-bottom:1px solid #333!important}
+.header .nav{background:#000!important}
+.header .actions .action,.header .actions .icon-action{
+ background:transparent!important;border:0!important;box-shadow:none!important;
+ color:#fff!important;padding:5px!important;font-size:22px!important
+}
+.count{background:#fff!important;color:#000!important;border:0!important}
+.header-search{background:#080808!important;border:1px solid #555!important;box-shadow:none!important}
+.header-search input{background:transparent!important;color:#fff!important}
+.header-search input::placeholder{color:#aaa!important}
+.hero{padding:40px 0!important;background:#000!important}
+.hero-grid{grid-template-columns:1fr 0.9fr!important;gap:24px!important}
+.hero h1{font-size:clamp(36px,5vw,62px)!important;line-height:1.12!important;margin:12px 0!important}
+.hero p{color:#ddd!important;line-height:1.75!important}
+.eyebrow{color:#fff!important;letter-spacing:2px!important}
+.cta,.add,.checkout,.filter.active,.filters button.active{
+ background:#fff!important;color:#000!important;border:1px solid #fff!important
+}
+.cta span{color:#000!important}
+.outline,.filter,.filters button,.search,.heart,.field{
+ background:#000!important;color:#fff!important;border:1px solid #555!important
+}
+.hero-art{min-height:280px!important;background:#080808!important;border:1px solid #444!important}
+.hero-photo-frame{min-height:250px!important;background:#080808!important;border:1px solid #444!important}
+#heroPhotoEmpty{color:#fff!important;font-family:'DM Sans',sans-serif!important;text-align:center;padding:24px!important}
+#heroPhotoEmpty span{color:#ccc!important}
+.art-note{background:#000!important;color:#fff!important;border:1px solid #555!important;box-shadow:none!important;font-family:'DM Sans',sans-serif!important}
+.shop{background:#000!important}
+.product{background:#080808!important;border:1px solid #333!important}
+.product-art{background:#111!important}
+.product-info{background:#080808!important}
+.product-info small,.price{color:#fff!important}
+.empty{color:#fff!important}
+.footer{background:#000!important;border-top:1px solid #333!important}
+.footer p,.copyright{color:#ccc!important}
+.drawer{background:#000!important;color:#fff!important}
+input,textarea,select{background:#080808!important;color:#fff!important;border-color:#555!important}
+@media(max-width:650px){
+ .hero{padding:30px 0!important}
+ .hero-grid{grid-template-columns:1fr!important;gap:22px!important}
+ .hero-art{min-height:230px!important}
+ .hero-photo-frame{min-height:205px!important}
+ .header .nav{background:#000!important}
+ .header-search-wrap{background:#000!important}
+ .header-search{height:48px!important}
+}
