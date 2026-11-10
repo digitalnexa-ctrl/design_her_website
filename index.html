@@ -86,9 +86,9 @@ function closeDrawer(){$('drawerBackdrop').classList.remove('open');document.bod
 $('filters').addEventListener('click',e=>{const b=e.target.closest('[data-filter]');if(!b)return;activeFilter=b.dataset.filter;document.querySelectorAll('.filter').forEach(x=>x.classList.toggle('active',x===b));renderProducts()});
 $('searchInput').addEventListener('input',e=>{query=e.target.value;renderProducts()});
 
-$('cartBtn').onclick=()=>openDrawer('cart');$('wishlistBtn').onclick=()=>openDrawer('wishlist');const footerWishlistLink=$('footerWishlistLink');if(footerWishlistLink)footerWishlistLink.onclick=e=>{e.preventDefault();openDrawer('wishlist')};$('closeDrawer').onclick=closeDrawer;$('drawerBackdrop').addEventListener('click',e=>{if(e.target===$('drawerBackdrop'))closeDrawer()});
+$('closeDrawer').onclick=closeDrawer;$('drawerBackdrop').addEventListener('click',e=>{if(e.target===$('drawerBackdrop'))closeDrawer()});
 document.querySelectorAll('[data-category-link]').forEach(a=>a.addEventListener('click',()=>{activeFilter=a.dataset.categoryLink;document.querySelectorAll('.filter').forEach(x=>x.classList.toggle('active',x.dataset.filter===activeFilter));renderProducts()}));
-document.addEventListener('click',e=>{const target=e.target.closest('#wishlistBtn,#cartBtn,#footerWishlistLink');if(!target)return;e.preventDefault();e.stopImmediatePropagation();openDrawer(target.id==='cartBtn'?'cart':'wishlist')},true);
+
 renderProducts();updateCounts();loadStoreProducts();if(new URLSearchParams(location.search).get('openWishlist')==='1')openDrawer('wishlist');
 </script>
 </body></html>
