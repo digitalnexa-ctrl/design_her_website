@@ -17,7 +17,7 @@
 
 .footer-grid{display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:34px;padding:58px 0 42px}.footer-grid .brand{text-decoration:none;display:inline-block}.footer-grid b{display:block;font-size:11px;letter-spacing:3px;margin:4px 0 24px;color:#fff}.footer-grid p{margin:0 0 15px;color:#c8c8c8;font-size:14px;line-height:1.6}.footer-grid a{color:inherit;text-decoration:none}.footer-grid a:hover{color:#fff;text-decoration:underline}.footer-grid .footer-brand p{margin-top:22px}.copyright{border-top:1px solid #333;padding:24px 0 30px;color:#aaa;font-size:11px;letter-spacing:1.5px}@media(max-width:700px){.footer-grid{grid-template-columns:1fr 1fr;gap:28px 18px;padding:42px 0 28px}.footer-grid .footer-brand{grid-column:1/-1}.footer-grid b{margin-bottom:15px}.footer-grid p{font-size:13px}}
 </style>
-<link rel="stylesheet" href="assets/css/premium-gold.css?v=20261110-simplefont">
+<link rel="stylesheet" href="assets/css/premium-gold.css?v=20261110-footerfix2">
 
 <style>
 .announcement-marquee{display:block!important;overflow:hidden!important;white-space:nowrap!important;background:#080808!important;color:#fff!important;padding:12px 0!important;border-bottom:1px solid #292929!important;font-family:Montserrat,Arial,sans-serif!important;font-size:11px!important;font-weight:500!important;letter-spacing:3px!important;text-align:left!important}
@@ -29,6 +29,16 @@
 
 <style>
 .hero .hero-simple-title{font-family:'Montserrat',Arial,sans-serif!important;font-size:clamp(30px,5vw,48px)!important;font-weight:600!important;font-style:normal!important;line-height:1.25!important;letter-spacing:-1px!important;margin:0 0 20px!important;color:#fff!important}
+</style>
+
+<style id="design-her-footer-final">
+.footer-grid{display:grid!important;grid-template-columns:1.35fr repeat(4,minmax(0,1fr))!important;align-items:start!important;gap:30px!important}
+.footer-grid>.footer-column,.footer-grid>.footer-brand{display:block!important;visibility:visible!important;min-width:0!important}
+.footer-grid>.footer-column>b{display:block!important;color:#fff!important;margin:4px 0 20px!important;letter-spacing:3px!important}
+.footer-grid>.footer-column p{display:block!important;margin:0 0 14px!important}
+.footer-grid>.footer-column a{display:inline-block!important;color:#d0d0d0!important}
+.footer-grid>.footer-column a:hover{color:#fff!important;text-decoration:underline!important}
+@media(max-width:700px){.footer-grid{grid-template-columns:1fr 1fr!important;gap:30px 18px!important}.footer-grid>.footer-brand{grid-column:1/-1!important}.footer-grid>.footer-column{grid-column:auto!important}}
 </style>
 </head>
 <body>
@@ -43,10 +53,10 @@
 </main>
 <footer class="footer" id="contact"><div class="wrap"><div class="footer-grid">
 <div class="footer-brand"><a class="brand" href="./">DESIGN HER</a><p>Thoughtful gifts. Beautiful moments.<br>Made to make someone smile.</p></div>
-<div><b>SHOP</b><p><a href="./">Home</a></p><p><a href="shop.html">Shop all gifts</a></p><p><a href="shop.html">Gift collection</a></p><p><a href="shop.html">Personalised gifts</a></p></div>
-<div><b>CUSTOMER CARE</b><p><a href="cart.html">My bag</a></p><p><a href="./?openWishlist=1">Wishlist</a></p><p><a href="policies.html#shipping">Shipping card</a></p><p><a href="policies.html#payment">Payment</a></p><p><a href="policies.html#returns">Return &amp; Refund Policy</a></p></div>
-<div><b>ABOUT &amp; STORE</b><p><a href="policies.html#about">Our story</a></p><p><a href="https://www.instagram.com/designher.official/" target="_blank" rel="noopener">Customise</a></p><p><a href="https://www.instagram.com/designher.official/" target="_blank" rel="noopener">Instagram</a></p><p><a href="admin.html">Admin Login</a></p></div>
-<div><b>POLICIES</b><p><a href="policies.html#shipping-policy">Shipping Policy</a></p><p><a href="policies.html#terms">Terms &amp; Conditions</a></p><p><a href="policies.html#privacy">Privacy Policy</a></p></div>
+<div class="footer-column"><b>SHOP</b><p><a href="./">Home</a></p><p><a href="shop.html">Shop all gifts</a></p><p><a href="shop.html">Gift collection</a></p><p><a href="shop.html">Personalised gifts</a></p></div>
+<div class="footer-column"><b>CUSTOMER CARE</b><p><a href="cart.html">My bag</a></p><p><a href="./?openWishlist=1">Wishlist</a></p><p><a href="policies.html#shipping">Shipping card</a></p><p><a href="policies.html#payment">Payment</a></p><p><a href="policies.html#returns">Return &amp; Refund Policy</a></p></div>
+<div class="footer-column"><b>ABOUT &amp; STORE</b><p><a href="policies.html#about">Our story</a></p><p><a href="https://www.instagram.com/designher.official/" target="_blank" rel="noopener">Customise</a></p><p><a href="https://www.instagram.com/designher.official/" target="_blank" rel="noopener">Instagram</a></p><p><a href="admin.html">Admin Login</a></p></div>
+<div class="footer-column"><b>POLICIES</b><p><a href="policies.html#shipping-policy">Shipping Policy</a></p><p><a href="policies.html#terms">Terms &amp; Conditions</a></p><p><a href="policies.html#privacy">Privacy Policy</a></p></div>
 </div><div class="copyright">© 2026 DESIGN HER · THE GIFT EDIT</div></div></footer>
 <div class="drawer-backdrop" id="drawerBackdrop"><aside class="drawer" aria-label="Your gift bag"><div class="drawer-head"><h3 id="drawerTitle">Your gift bag</h3><button class="close" id="closeDrawer" aria-label="Close">×</button></div><div class="cart-items" id="drawerItems"></div><div class="drawer-note">This is a design preview. Product pricing, stock, delivery and secure payment will be connected before the store goes live.</div><a class="checkout" href="#shop" id="drawerAction">Continue exploring</a></aside></div><div class="notice" id="notice" role="status"></div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
