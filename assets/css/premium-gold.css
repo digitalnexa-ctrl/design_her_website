@@ -253,3 +253,22 @@ a,a:visited,.brand,.brand small,.eyebrow,.price,.count,h1,h2,h3,h4,h5,h6,p,span,
 .announcement,.footer,.header,.nav{border-color:#333!important}
 hr,.divider,.copyright{border-color:#444!important}
 ::selection{background:#fff!important;color:#000!important}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* DESIGN HER final monochrome typography and surfaces */
+html,body,body *{font-family:'Montserrat',sans-serif!important;color:#fff!important}
+html,body{background:#000!important;color:#fff!important}
+body,main,header,footer,section,article,aside,nav,.wrap,.header,.nav,.announcement,.topbar,.top,.hero,.hero-grid,.hero-art,.hero-photo-frame,.feature,.shop,.category,.product,.product-card,.product-art,.photo,.gallery,.mini-art,.thumb,.card,.panel,.stat,.summary,.promise,.drawer,.modal,.modal-content,.side,.main,.content,.header-search-wrap,.header-search,.footer,.cart-item,.order-card,.settings-card,.table-wrap,.table-container,.section-head,.hero-copy,.empty,.empty-state,.product-grid,.categories,.category-grid{background:#000!important;background-color:#000!important;color:#fff!important;border-color:#3a3a3a!important}
+h1,h2,h3,h4,h5,h6,.brand,.brand small,.eyebrow,.price,p,span,label,strong,b,small,li,th,td,a,a:visited{color:#fff!important;font-family:'Montserrat',sans-serif!important}
+input,textarea,select,.header-search{background:#000!important;color:#fff!important;border:1px solid #666!important}
+input::placeholder,textarea::placeholder{color:#ccc!important;opacity:1!important}
+button,.btn,.cta,.add,.checkout,.outline,.filter,.filters button,.action,.navitem,.qty button,.remove,.mini,.search{background:#000!important;color:#fff!important;border:1px solid #666!important;font-family:'Montserrat',sans-serif!important}
+button:hover,.btn:hover,.cta:hover,.add:hover,.checkout:hover,.outline:hover,.filter:hover,.filters button:hover{background:#fff!important;color:#000!important;border-color:#fff!important}
+.count{background:#fff!important;color:#000!important;border:0!important}
+.header-search input{background:transparent!important;color:#fff!important;border:0!important}
+.product,.card,.category,.panel,.stat,.promise article,.hero-art,.hero-photo-frame,.product-art,.gallery,.drawer,.modal{box-shadow:none!important}
+.product-art,.photo,.gallery,.mini-art,.thumb,.hero-art,.hero-photo-frame{background:#080808!important}
+.announcement,.footer,.header,.nav{border-color:#333!important}
+hr,.divider,.copyright{border-color:#444!important}
+::selection{background:#fff!important;color:#000!important}
