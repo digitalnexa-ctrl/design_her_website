@@ -369,3 +369,56 @@ input,textarea,select{background:#080808!important;color:#fff!important;border-c
   align-items:center!important;
   justify-content:center!important;
 }
+
+
+/* Final contrast corrections for exact homepage elements */
+html body .header .nav a.brand,
+html body .header .nav a.brand:visited,
+html body .header .nav a.brand small{
+ color:#fff!important;
+ -webkit-text-fill-color:#fff!important;
+ opacity:1!important;
+}
+html body .header .nav .actions button#wishlistBtn,
+html body .header .nav .actions button#cartBtn,
+html body .header .nav .actions button#wishlistBtn *,
+html body .header .nav .actions button#cartBtn *{
+ color:#fff!important;
+ -webkit-text-fill-color:#fff!important;
+ background:transparent!important;
+ border:0!important;
+ box-shadow:none!important;
+ opacity:1!important;
+ text-shadow:none!important;
+}
+html body .header .nav .actions button#wishlistBtn .count,
+html body .header .nav .actions button#cartBtn .count{
+ background:#fff!important;
+ color:#000!important;
+ -webkit-text-fill-color:#000!important;
+}
+html body main .hero a.cta,
+html body main .hero a.cta:visited,
+html body main .hero a.cta span{
+ background:#fff!important;
+ color:#000!important;
+ -webkit-text-fill-color:#000!important;
+ opacity:1!important;
+}
+html body main .hero h1,
+html body main .hero h1 em{
+ color:#fff!important;
+ -webkit-text-fill-color:#fff!important;
+ font-family:'DM Sans',sans-serif!important;
+}
+html body main .hero .eyebrow,
+html body main .hero p,
+html body main .hero #heroPhotoEmpty,
+html body main .hero #heroPhotoEmpty span,
+html body main .hero .art-note{
+ color:#fff!important;
+ -webkit-text-fill-color:#fff!important;
+}
+html body main .hero .art-note{
+ background:#000!important;border:1px solid #555!important;
+}
