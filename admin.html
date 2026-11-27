@@ -73,7 +73,7 @@ const cats=['Personalised Gifts','Kids Books','Birthday Gifts','Anniversary Gift
 function toast(t){$('notice').textContent=t;$('notice').classList.add('show');setTimeout(()=>$('notice').classList.remove('show'),2400)}
 function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function slugify(s){return s.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')+'-'+Math.random().toString(36).slice(2,7)}
-function mapProduct(p){return {id:p.id,name:p.name,cat:p.category,price:p.price,stock:p.stock,sku:p.sku||'',image:p.image_url||'',desc:p.description||'',status:p.is_active?'Active':'Draft'}}
+function mapProduct(p){return {id:p.id,slug:p.slug,name:p.name,cat:p.category,price:p.price,stock:p.stock,sku:p.sku||'',image:p.image_url||'',desc:p.description||'',status:p.is_active?'Active':'Draft'}}
 async function refresh(){
  const {data,error}=await client.from('products').select('*').order('created_at',{ascending:false});
  if(error)throw error;products=(data||[]).map(mapProduct);render();
